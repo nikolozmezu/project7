@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: red-rose;
-    src: url(/assets/fonts/RedRose-VariableFont_wght.ttf);
+    src: url(../../assets/fonts/RedRose-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: rufina-bold;
-    src: url(/assets/fonts/Rufina-Bold.ttf);
+    src: url(../../assets/fonts/Rufina-Bold.ttf);
 }
 
 @font-face {
     font-family: red-hat;
-    src: url(/assets/fonts/RedHatDisplay-VariableFont_wght.ttf);
+    src: url(../../assets/fonts/RedHatDisplay-VariableFont_wght.ttf);
 }
 
 
@@ -96,7 +96,7 @@ div.header-item.search input {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 12px 0 12px 42px;
-    background-image: url("/assets/media/icons/search.png");
+    background-image: url("../../assets/media/icons/search.png");
     background-repeat: no-repeat;
     background-position: 8px;
     font-family: "red-hat";
@@ -243,7 +243,7 @@ div.banner {
     margin-top: 40px;
     padding: 117px 491px;
     text-align: center;
-    background: url(/assets/media/images/banner-img.png) no-repeat;
+    background: url(../../assets/media/images/banner-img.png) no-repeat;
     background-size: cover;
     background-color: var(--border-color)
 }
