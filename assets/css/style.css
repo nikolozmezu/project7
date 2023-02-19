@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: red-rose;
-    src: url(../../assets/fonts/RedRose-VariableFont_wght.ttf);
+    src: url("../../assets/fonts/RedRose-VariableFont_wght.ttf");
 }
 
 @font-face {
     font-family: rufina-bold;
-    src: url(../../assets/fonts/Rufina-Bold.ttf);
+    src: url("../../assets/fonts/Rufina-Bold.ttf");
 }
 
 @font-face {
     font-family: red-hat;
-    src: url(../../assets/fonts/RedHatDisplay-VariableFont_wght.ttf);
+    src: url("../../assets/fonts/RedHatDisplay-VariableFont_wght.ttf");
 }
 
 
