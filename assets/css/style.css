@@ -1,0 +1,305 @@
+/* fonts */
+
+@font-face {
+    font-family: red-rose;
+    src: url(/assets/fonts/RedRose-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: rufina-bold;
+    src: url(/assets/fonts/Rufina-Bold.ttf);
+}
+
+@font-face {
+    font-family: red-hat;
+    src: url(/assets/fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+
+/* variables */
+
+:root {
+    --bg-color: #F5F5F5;
+    --font-color: #000;
+    --border-color: #4B4B4B;
+    --border-color-light: #EAEAEA;
+}
+.dis-flex {display: flex;}
+
+
+
+/* animations  */
+/* specific download icon animation */
+
+@keyframes download-svg-animation {
+    from {transform: translateY(-13px);}
+    to {transform: translateY(0px);}
+}
+
+
+
+/* global styling */
+body {background-color:var(--bg-color)}
+
+header.header {
+    padding: 51px 55px;
+    gap: 255px;
+    border: 1px solid;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+header nav ul { gap: 50px }
+
+a {
+    text-decoration: none;
+    color: var(--font-color)
+}
+
+/* logo text styling */
+div.header-item.logo span.logo-text a {
+    font-family: "rufina", sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+/* header nav styling */
+
+header nav ul li a {
+    font-family: "red-rose", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 17px;
+    position: relative;
+}
+
+header nav ul li a:hover:after, header nav ul li a:after, header nav ul li a.active:after {
+    width: 100%;
+}
+
+header nav ul li a:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--font-color);
+    position: absolute;
+}
+
+header nav ul li a:hover:after, header nav ul li a:after {
+    transition: .3s ease-in-out;
+}
+
+/* search styling */
+div.header-item.search input {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px 0 12px 42px;
+    background-image: url("/assets/media/icons/search.png");
+    background-repeat: no-repeat;
+    background-position: 8px;
+    font-family: "red-hat";
+    color: #969494;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+/* homepage styling */
+main {margin: 46px 68px 119px 68px}
+
+main section.color-section nav.color-nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+    font-family: "red-hat";
+    line-height: 21px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+main section.color-section nav.color-nav ul li a {
+    border: .5px solid var(--border-color-light);
+    border-radius: 10px;
+    padding: 6px 24px;
+    transition: .3s ease-in-out;
+}
+
+main section.color-section nav.color-nav ul li a:hover {
+    background-color: #000;
+    color:#F5F5F5;
+    border-color: #000;
+    transition: .37s ease-in-out;
+}
+
+div.color-lists {
+    margin-top: 45px;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 64px;
+    row-gap: 100px;
+}
+
+/* color-boxes  */
+
+/* color type styling */
+
+div.color-lists div.color-box div.top-box div.colors-type {
+    font-family: "red-hat";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+/* color list divs styling */
+
+div.color-lists div.color-box div.top-box div.colors div {
+    width: 260px;
+    height: 50px;
+    cursor: pointer;
+}
+
+div.color-lists div.color-box div.top-box div.colors div:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+/* bottom box styling */
+
+div.color-lists div.color-box div.bottom-box {
+    border: 1px solid var(--border-color-light);
+    padding: 17px 25px 10px 25px;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+div.color-lists div.color-box div.bottom-box div.action-box { justify-content: space-between; }
+div.color-lists div.color-box div.bottom-box div.action-box div.action-button.links-action { gap: 21px }
+
+/* love icon hover  */
+div.color-lists div.color-box div.bottom-box div.action-box div.action-button svg { 
+    cursor: pointer;
+}
+
+div.color-lists div.color-box div.bottom-box div.action-box div.action-button svg path{
+    fill: transparent;
+    transition: .4s ease-out;
+}
+
+div.color-lists div.color-box div.bottom-box div.action-box div.action-button.love-action svg path:hover {
+    fill: rgb(255,0,0);
+    transition: .4s ease-out;
+}
+
+svg:hover #download-btn {
+    animation: 1s ease-in-out download-svg-animation;
+}
+
+
+/* div color title styling */
+
+div.color-box div.colors div {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+div.color-box div.colors div span {
+    color: #fff;
+    background-color: #D9D9D980;
+    padding: 3px 6px;
+    opacity: 0;
+    width: 0;
+    transition: .4s ease-in;
+    font-family: "red-hat";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+div.color-box div.colors div span:first-child {
+    border-radius: 0px 10px 0px 4px;
+}
+
+div.color-box div.colors div span:nth-child(2) {
+    border-radius: 10px 0px 4px;
+    text-align: right;
+}
+
+div.color-box div.colors div:hover span {
+    opacity: 1;
+    width: 25%;
+    transition: .4s ease-in;
+}
+
+
+/* collection page styling */
+main.collection {
+    margin-left:0;
+    margin-right: 0;
+}
+div.banner {
+    margin-top: 40px;
+    padding: 117px 491px;
+    text-align: center;
+    background: url(/assets/media/images/banner-img.png) no-repeat;
+    background-size: cover;
+    background-color: var(--border-color)
+}
+
+div.banner h1 {
+    color: #fff;
+    font-family: "red-rose";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+div.color-box div.circle-color div.color-hex {
+    border-radius: 50px;
+    width: 58px;
+    height: 58px;
+    transition: .4s ease-in-out;
+
+}
+
+div.image, div.color-box div.circle-color div.color-hex { cursor: pointer; }
+
+div.color-box div.circle-color {
+    padding: 15px 0 10px 0 ;
+    gap: 10px;
+    justify-content: center;
+    border: 1px solid var(--border-color-light);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+div.hex-title {
+    font-family: "red-hat";
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    color: #5A5A5A;
+    text-align: center;
+    margin-top: 7px;
+}
+
+div.circle-color div.dis-flex.box {
+    flex-direction: column;
+    gap: 7px;
+}
+
+div.color-lists.collection {
+    margin: 100px;
+    column-gap: 100px;
+}
+
+div.color-box div.circle-color:hover  {
+    border-color: #000;
+    transition: .4s ease-in-out;
+}
+
+div.color-box div.circle-color div.color-hex:hover {
+    transform: scale(.85);
+}
